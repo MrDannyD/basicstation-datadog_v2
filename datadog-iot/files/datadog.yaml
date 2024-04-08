@@ -5,6 +5,8 @@ listeners:
 config_providers:
   - name: docker
     polling: true
+logs_config:
+  container_collect_all: true
 process_config:
   enabled: true
 apm_config:
