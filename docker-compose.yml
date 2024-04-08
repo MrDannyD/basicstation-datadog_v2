@@ -6,6 +6,12 @@ volumes:
   logs: {}
   web: {}
 services:
+  basicstation:
+    image: xoseperez/basicstation:latest
+    container_name: basicstation
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
   datadog-iot:
     build:
       context:  datadog-iot
@@ -16,9 +22,3 @@ services:
     labels:
       io.balena.features.dbus: '1'
       io.balena.features.balena-socket: '1'
-  basicstation:
-    image: xoseperez/basicstation:latest
-    container_name: basicstation
-    restart: unless-stopped
-    privileged: true
-    network_mode: host
