@@ -22,3 +22,5 @@ services:
     labels:
       io.balena.features.dbus: '1'
       io.balena.features.balena-socket: '1'
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.journal-logs: '1'
