@@ -5,6 +5,7 @@ listeners:
 config_providers:
   - name: docker
     polling: true
+env: stag
 logs_config:
   container_collect_all: true
 process_config:
